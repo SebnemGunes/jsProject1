@@ -29,3 +29,4 @@ const _ =require('lodash')  //is used to import the lodash library into the file
 const items = [1,[2,[3,[4]]]]
 const newItems = _.flattenDeep(items); //Tmethod is used to flatten up to depth time that is passed into the function.
 console.log(newItems);
+console.log("hello world") //With nodemon, changes are shown automatically  nodemon app.js
