@@ -9,12 +9,23 @@
 },10)*/
 
 
-const {readFileSync , writeFileSync} =require('fs')
-console.log('start');
-const test1 = readFileSync('./content/test1.txt','utf8')
-const test2 = readFileSync('./content/test2.txt','utf8')
+//npm -global command - node package manager
+//npm --version : check npm version
 
-writeFileSync('./content/resul_sync.txt',
-`Here is the RESULT: ${test1},${test2}`,
-{flag:'a'}
-)
+//local dependency - use it only particular project
+//npm i <packageName>
+
+//global dependency - use it in any project
+//npm install -g <packageName>
+//sudo install -g <packageName> (mac)
+
+//package.json   :It is a file containing information about the project.
+//manual approach( create package.json in the root, create properties etc..)
+//npm init  (firstly run) 
+//npm init -y (everything default)
+
+const _ =require('lodash')  //is used to import the lodash library into the file.
+
+const items = [1,[2,[3,[4]]]]
+const newItems = _.flattenDeep(items); //Tmethod is used to flatten up to depth time that is passed into the function.
+console.log(newItems);
