@@ -24,9 +24,27 @@
 //npm init  (firstly run) 
 //npm init -y (everything default)
 
-const _ =require('lodash')  //is used to import the lodash library into the file.
+// const _ =require('lodash')  //is used to import the lodash library into the file.
 
-const items = [1,[2,[3,[4]]]]
-const newItems = _.flattenDeep(items); //Tmethod is used to flatten up to depth time that is passed into the function.
-console.log(newItems);
-console.log("hello world") //With nodemon, changes are shown automatically  nodemon app.js
+// const items = [1,[2,[3,[4]]]]
+// const newItems = _.flattenDeep(items); //Tmethod is used to flatten up to depth time that is passed into the function.
+// console.log(newItems);
+// console.log("hello world") //With nodemon, changes are shown automatically  nodemon app.js
+//const { result } = require('lodash')
+const http=require('http');
+
+
+const server=http.createServer((req,res)=>{
+
+    if (req.url==='/'){
+        res.end('Home page')
+    }
+    if(req.url==='/about'){
+        res.end('About page')
+    
+    }
+    res.end('end page')
+})
+server.listen(5004,()=>{
+    console.log('Server listening on port 5004..')
+})
