@@ -18,8 +18,8 @@ const server=http.createServer((req,res)=>{
     }
     res.end('error page')
 })
-server.listen(5007,()=>{
-    console.log('Server listening on port 5007..')
+server.listen(5000,()=>{
+    console.log('Server listening on port 5000..')
 })
 
 
