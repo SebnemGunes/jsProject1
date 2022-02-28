@@ -8,8 +8,9 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "description":"",
+  "description": "",
   "dependencies": {
+    "express": "^4.17.3",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
